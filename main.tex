@@ -1,5 +1,11 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{xcolor}
 
 \title{Implications éthiques liées à la création de logiciels
 
@@ -24,11 +30,63 @@ Face à ces enjeux, il est essentiel d’adopter une approche responsable dans l
 \subsection{La protection de la vie privée sur les applications}
 À une ère où nombre d'applications collectent nos données  comme notre nom, notre adresse, notre e-mail ou notre téléphone. Il est crucial pour les utilisateurs que notre vie privée soit un minimum protégée. Néanmoins, il subsiste un risque quant à la confidentialité des utilisateurs. Ces données peuvent alors être utilisées à des fins publicitaires, de ciblage excessif ou même, dans des cas extrêmes, de cybercriminalité (comme de la fraude ou des vols d'identité).\\
 On peut donc réfléchir à des manières d'améliorer la protection de la vie privée sur ces applications. Du côté des utilisateurs et des développeurs, il y a plusieurs solutions. Intéressons-nous dans un premier temps aux utilisateurs :\\
-- ils peuvent restreindre et vérifier les accès accordés aux applications (caméra, micro, localisation etc..)\\
-- privilégier des applications respectueuses de la vie privée (DuckDuckGo ou signal par ex)\\
+- ils peuvent restreindre et vérifier les accès accordés aux applications (caméra, micro, localisation, etc..)\\
+- privilégier des applications respectueuses de la vie privée (DuckDuckGo ou Signal par ex)\\
 - désactiver le suivi publicitaire et ajuster les paramètres d'application.\\
-- réduire l'usage de connexions via Google, Facebook ou Apple pour limiter la centralisation de données \\
+- réduire l'usage de connexions via Google, Facebook ou Apple pour limiter la centralisation des données \\
 - Utiliser des VPN et bloqueurs de trackers\\
+Ensuite voyons le cas des développeurs : \\
+- Ne collecter que les infos nécessaires \\
+- Stocker et transmettre les données de manière sécurisée (chiffrement de bout en bout, HTTPS..)
+- Informer clairement les utilisateurs sur les données collectées et leur donner un contrôle total sur leur utilisation. \\
+- Respecter le RGPD (Europe), la CCPA (Californie) et d’autres lois sur la protection des données. \\
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{>{\bfseries}m{3.0cm} m{2.0cm} m{3.5cm} m{4.5cm} m{2.5cm}}
+\toprule
+Loi & Zone géographique & Objectifs principaux & Droits des utilisateurs & Sanctions possibles \\
+\midrule
+RGPD \newline (Règlement Général sur la Protection des Données) 
+& Union européenne 
+& Protéger les données personnelles et harmoniser les règles à l’échelle européenne 
+& \begin{itemize}
+    \item Consentement explicite
+    \item Droit d'accès, rectification, suppression
+    \item Portabilité des données
+    \item Opposition au traitement
+\end{itemize}
+& Jusqu’à 20 M€ ou 4\% du CA mondial \\
+\midrule
+CCPA \newline (California Consumer Privacy Act) 
+& Californie (États-Unis) 
+& Donner aux consommateurs le contrôle sur leurs données personnelles 
+& \begin{itemize}
+    \item Savoir quelles données sont collectées
+    \item Demander la suppression
+    \item Refuser la vente des données
+\end{itemize}
+& Jusqu’à 7 500 \$ par violation intentionnelle \\
+\midrule
+Loi ePrivacy \newline (directive européenne en cours de réforme) 
+& Union européenne 
+& Encadrer la confidentialité des communications électroniques (cookies, emails, etc.) 
+& \begin{itemize}
+    \item Consentement pour les cookies
+    \item Confidentialité des communications
+    \item Opposition au spam
+\end{itemize}
+& Dépend des législations nationales \\
+\bottomrule
+\end{tabular}
+\caption{Comparatif des principales réglementations sur la protection des données}
+\end{table}
+
+Ces lois cherchent à restaurer un équilibre entre innovation numérique et respect de la vie privée. Elles responsabilisent les entreprises développant des applications et redonnent aux utilisateurs le contrôle sur leurs données personnelles. Toutefois, leur efficacité dépend de leur mise en œuvre concrète, de la vigilance des utilisateurs et du rôle actif des autorités de régulation. Néanmoins, il est important pour les utilisateurs comme pour les développeurs de rester vigilants sur l'importance de la protection des données dans les applications et du côté des développeurs de donner un maximum de choix à l’utilisateur quant aux données qu'il souhaite fournir ou non à l'application. Néanmoins il ne faut pas que l'utilisateur,lui, oublie qu'il doit rester informé et lire toutes les informations mises à sa disposition sur ce sujet. La protection des données est donc un sujet central dans la création d'application.
+
+
+
+
 
 
 \subsection{les biais algorithmiques} 
