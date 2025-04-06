@@ -1,0 +1,3 @@
+[submodule "dossier/submodule"]
+	path = dossier/submodule
+	url = https://github.com/Aid4n4/Projet-git.git
