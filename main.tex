@@ -39,10 +39,12 @@ Ensuite voyons le cas des développeurs : \\
 - Ne collecter que les infos nécessaires \\
 - Stocker et transmettre les données de manière sécurisée (chiffrement de bout en bout, HTTPS..)
 - Informer clairement les utilisateurs sur les données collectées et leur donner un contrôle total sur leur utilisation. \\
-- Respecter le RGPD (Europe), la CCPA (Californie) et d’autres lois sur la protection des données. \\
+- Respecter le RGPD (Europe), la CCPA (Californie) et d’autres lois sur la protection des données.
+
 \begin{table}[h!]
 \centering
-\renewcommand{\arraystretch}{1.4}
+\small
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{>{\bfseries}m{3.0cm} m{2.0cm} m{3.5cm} m{4.5cm} m{2.5cm}}
 \toprule
 Loi & Zone géographique & Objectifs principaux & Droits des utilisateurs & Sanctions possibles \\
@@ -81,7 +83,6 @@ Loi ePrivacy \newline (directive européenne en cours de réforme)
 \end{tabular}
 \caption{Comparatif des principales réglementations sur la protection des données}
 \end{table}
-
 Ces lois cherchent à restaurer un équilibre entre innovation numérique et respect de la vie privée. Elles responsabilisent les entreprises développant des applications et redonnent aux utilisateurs le contrôle sur leurs données personnelles. Toutefois, leur efficacité dépend de leur mise en œuvre concrète, de la vigilance des utilisateurs et du rôle actif des autorités de régulation. Néanmoins, il est important pour les utilisateurs comme pour les développeurs de rester vigilants sur l'importance de la protection des données dans les applications et du côté des développeurs de donner un maximum de choix à l’utilisateur quant aux données qu'il souhaite fournir ou non à l'application. Néanmoins il ne faut pas que l'utilisateur,lui, oublie qu'il doit rester informé et lire toutes les informations mises à sa disposition sur ce sujet. La protection des données est donc un sujet central dans la création d'application.
 
 
@@ -92,15 +93,6 @@ Ces lois cherchent à restaurer un équilibre entre innovation numérique et res
 \subsection{les biais algorithmiques} 
 Les biais algorithmiques en informatique désignent des erreurs systématiques dans les décisions prises par des algorithmes, souvent causées par des données biaisées, des choix de conception involontaires, des erreurs d’interprétation ou des boucles de rétroaction biaisées. Ces biais reflètent ou amplifient les discriminations existantes et peuvent se manifester dans divers domaines. Ils trouvent leur origine dans plusieurs facteurs. D'abord, les données biaisées, qui sont parfois non représentatives ou porteuses de discriminations historiques, notamment dans les statistiques socio-économiques ou raciales. Ensuite, les choix de conception, où les développeurs influencent involontairement les résultats en programmant selon leurs propres préjugés inconscients ou en sélectionnant certaines variables.aussi les boucles de rétroaction biaisées renforcent ces inégalités, car les décisions prises par un algorithme influencent les données futures, perpétuant ainsi les discriminations initiales. Ces biais se manifestent dans plusieurs domaines. En justice pénale, par exemple, les outils d’évaluation des risques pénalisent davantage certains groupes, exacerbant les disparités raciales. En reconnaissance faciale, les systèmes sont souvent moins précis pour les personnes à la peau foncée, en raison d’un manque de diversité dans les bases de données d'entraînement. De même, dans la publicité ciblée, certains emplois mieux rémunérés sont davantage proposés aux hommes qu’aux femmes. Pour limiter ces biais, plusieurs solutions existent. Il est essentiel de diversifier et nettoyer les ensembles de données afin qu’ils reflètent mieux la diversité de la population. Les algorithmes doivent être régulièrement audités pour identifier et corriger d’éventuels biais. Par ailleurs, la mise en place de cadres légaux est nécessaire pour garantir la transparence et l’équité dans l’utilisation des intelligences artificielles.Il est primordial d’impliquer des experts en éthique et en diversité dès la conception des systèmes afin d’anticiper et de limiter ces effets négatifs.Donc même si les biais algorithmiques représentent un défi majeur, une approche proactive combinant amélioration technique, régulation et expertise multidisciplinaire peut contribuer à les atténuer et à rendre l’intelligence artificielle plus juste et équitable.
 
-
-
-
-\section{Dévelloppement}
-\subsection{La protection de la vie privée sur les applications}
-À une ère où nombre d'applications collectent nos données  comme notre nom, notre adresse, notre e-mail ou notre téléphone. Il est crucial pour les utilisateurs que notre vie privée soit un minimum protégée. Néanmoins, il subsiste un risque quant à la confidentialité des utilisateurs. Ces données peuvent alors être utilisées à des fins publicitaires, de ciblage excessif ou même, dans des cas extrêmes, de cybercriminalité (comme de la fraude ou des vols d'identité).\\
-On peut donc réfléchir à des manières d'améliorer la protection de la vie privée sur ces applications. Du côté des utilisateurs et des développeurs, il y a plusieurs solutions.
-
-\section{Développement}
 \subsection{Implications éthiques liées à la sécurité  logiciels}
 Dans un monde de plus en plus numérisé, où les entreprises et les organismes utilisent de
 nombreux logiciels, la sécurité des logiciels est devenue un enjeu majeur. En effet, chaque
@@ -176,8 +168,32 @@ responsable ou à un juriste. Un exemple typique : dissimuler volontairement des
 dans un rapport de test d’intrusion. Ce n’est peut-être pas illégal, mais ce n’est pas éthique. Et
 cela peut entraîner de lourdes conséquences.\\
 
+\section{la transparence } 
+\subsection{Définition}
+La transparence dans l’ingénierie logiciel est la capacité qu’a un logiciel à \textit{“prendre des décisions visibles pour tous les acteurs concernés, comme la conception de l'application et la structure du plan de projet” (NineTwoThree)}\cite{def_transparence}
+\subsection{Comment reconnaît-on un logiciel transparent ?}
+La première chose qui témoigne de la transparence du logiciel est que celui-ci soit open source, c'est-à-dire qu’il diffuse publiquement son code source. Cela  permettra à quiconque de savoir en détail le contenu du code et de savoir comment les données sont utilisées.
+On attend d’un logiciel transparent qu’il diffuse aussi une documentation détaillée car en sachant comment fonctionne précisément un logiciel cela augmente sa transparence.Quand on  énonce le but, les objectifs ainsi que les attentes, les échecs et les avancées  d’un logiciel, cela permet à chaque personne travaillant sur le projet de posséder un maximum de clarté sur leur projet. De plus, justifier les données utilisées est un marqueur d’un bon logiciel transparent \cite{importance_transparence} car cela augmente sa crédibilité et sa fiabilité dans le marché.Et enfin avoir une politique de gestion des cookies claire est l’un des marqueur  les plus important car , bien que ce soit une obligation dans la loi française, quand l’utilisateur sait comment sont utilisés ses données , cela augmente la réputation éthique de l’entreprise.
+Nous allons voir tout de suite plus en détail pourquoi ces caractéristiques font qu’un logiciel est transparent  .
+
+Dans un premier temps, ces caractéristiques augmentent la confiance des utilisateurs et des collaborateurs envers le produit. Lorsqu'un logiciel est transparent cela prouve qu’il est sécurisé \cite{sécurite_transparence}
+car nous connaissons clairement le contenu du code source et donc rien ne peut être caché dessus tel que des logiciels malveillants. Le client  sait ce qu’il achète.  La transparence facilite et favorise la communication dans l'entreprise étant donné que tout le monde a accès aux mêmes informations, cela engendre une équité au sein de l’équipe  et le travail devient donc plus fluide et agréable . 
+De plus , celle-ci permet de résoudre les problèmes plus facilement. Quand la documentation logiciel est claire et complète nous pouvons plus facilement répondre aux problèmes car, généralement, lorsqu' un logiciel est open source et possède une documentation libre, une réelle communauté se fonde derrière notamment sur Github , ce qui permet de relever facilement les bugs et les résoudre plus rapidement. En plus d’augmenter sa sécurité, l'entreprise baisse son coût pour résoudre  ces problèmes car généralement ce sont des bénévoles qui, pour avoir de la reconnaissance, les résouds.
+D'autre part, la transparence  augmente la fidélité des utilisateurs car si l'utilisateur sait où vont ses données et comment elles sont collecté, l’utilisateur sera en confiance , ce qui augmentera la réputation du logiciel ce qui engendrera donc un plus économique pour l'entreprise. 
+\subsection{La loi et la Transparence numérique}
+La question de la Transparence dans les algorithme de logiciel est très encadré par des textes de lois français notamment celle du RGPD. Il y a en premier lieu des article 12 à 14 parlant de la transparence numérique comme celui-ci:
+ 
+ \textit{[...]Les informations sont fournies par écrit ou par d'autres moyens y compris, lorsque c'est approprié, par voie électronique. Lorsque la personne concernée en fait la demande, les informations peuvent être fournies oralement, à condition que l'identité de la personne concernée soit démontrée par d'autres moyens.(article 12)}. \cite{loi_transparence}
+
+Il y a aussi  la DSA (Digital Services Act) en Europe  qui permet de lutter contre toutes les dérives des géants du web en obligeant, par exemple, les sites à expliquer comment leurs algorithmes fonctionnent dans le cadre des recommandations publicitaires.
+\cite{digital_act}
+\subsection{Exemple d'une bonne transparence}
+Une entreprise qui a réussi à se démarquer de par sa transparence est Mozilla. Mozilla est l’entreprise de Firefox et elle est très présente sur Github. Github est un site pour contribuer sur des projets et  partager son code source. Nous voyons que Mozilla à publié 2500 codes source dans lequel chacun possède des documentations  , des erreurs( avec la contributions du public) mais aussi une catégorie "pull request" qui permet d’avertir publiquement que le projet à été modifier  .De ce fait nous pouvons constater que Mozilla est une entreprise qui accorde beaucoup d'importance à la transparence de leur projets 
 
 \section{Conclusion}
 L’éthique dans la création de logiciels est un enjeu fondamental à l’ère du numérique. La protection de la vie privée et la lutte contre les biais algorithmiques illustrent bien les défis auxquels les développeurs et les utilisateurs doivent faire face. Alors que la collecte et l’exploitation des données personnelles nécessitent des garanties solides pour éviter tout abus, les biais algorithmiques rappellent l’importance d’une conception inclusive et transparente des systèmes intelligents.
 Pour répondre à ces défis, des efforts conjoints entre les développeurs, les régulateurs et la société civile sont nécessaires. L’adoption de pratiques responsables, la mise en place de cadres légaux appropriés et l’implication d’experts en éthique permettent de limiter les dérives et de garantir une utilisation plus équitable des technologies. Ainsi, le développement logiciel doit toujours intégrer une réflexion éthique afin de respecter les principes fondamentaux de justice, de transparence et de respect des droits des individus.
+
+\bibliographystyle{plain}
+\bibliography{Bibliographie}
 \end{document}
